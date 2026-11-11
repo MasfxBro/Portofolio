@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Maliq's Journey — software engineering, projects, and skills."
+    />
+    <title>Maliq's Journey — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/data.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Maliq's Journey home"
+          ><img src="assets/svg/logo-m.svg" alt="Maliq's Journey"
+        /></a>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Open menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav__menu" id="primary-menu">
+          <a class="nav__link is-active" href="#home" data-i18n="navHome"
+            >Home</a
+          >
+          <a class="nav__link" href="#about" data-i18n="navAbout">About Me</a>
+          <a class="nav__link" href="#projects" data-i18n="navProjects"
+            >Projects</a
+          >
+          <a class="nav__link" href="#skills" data-i18n="navSkills">Skills</a>
+          <a class="nav__link" href="#contact" data-i18n="navContact"
+            >Contact Me</a
+          >
+          <button
+            class="language-toggle"
+            type="button"
+            aria-label="Change language"
+          >
+            EN <span>/</span> ID
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero__blob hero__blob--top" aria-hidden="true"></div>
+        <div class="hero__blob hero__blob--bottom" aria-hidden="true"></div>
+        <div class="hero__inner container">
+          <div class="hero__copy reveal">
+            <p class="eyebrow hero__eyebrow" data-i18n="heroGreeting">
+              Hi, I'm
+            </p>
+            <h1><span class="hero__name">Maliq</span></h1>
+            <p class="hero__subtitle" data-i18n="heroRole">
+              Software Engineering Student.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="button button--primary hero__choice is-primary"
+                href="#projects"
+                data-i18n="heroProjects"
+                >View my projects <span aria-hidden="true">→</span></a
+              >
+              <a
+                class="button button--text hero__choice"
+                href="#about"
+                data-i18n="heroAbout"
+                >About myself</a
+              >
+            </div>
+          </div>
+          <div class="hero__visual reveal">
+            <div class="hero__orb" aria-hidden="true"></div>
+            <figure class="mac-window hero__photo">
+              <div class="mac-window__bar" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </div>
+              <img
+                src="assets/images/hero.JPG"
+                alt="Maliq standing outdoors in a school uniform"
+                width="4000"
+                height="6000"
+                fetchpriority="high"
+              />
+            </figure>
+          </div>
+        </div>
+        <a class="scroll-hint" href="#about"
+          ><span data-i18n="scrollExplore">SCROLL TO EXPLORE</span
+          ><i aria-hidden="true"></i
+        ></a>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="about__inner container">
+          <figure class="mac-window about__photo reveal">
+            <div class="mac-window__bar" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </div>
+            <img
+              src="assets/images/about-child.jpeg"
+              alt="Maliq as a young child"
+              width="1200"
+              height="1600"
+              loading="lazy"
+            />
+          </figure>
+          <div class="about__copy reveal">
+            <p class="eyebrow" data-i18n="aboutLabel">
+              01 — A little stories about me
+            </p>
+            <h2 class="about__lead">
+              <strong data-i18n="aboutOpening">Hello, my name is Maliq.</strong>
+              <span data-i18n="aboutParagraph1"
+                >I am a Software Engineering student with a strong interest in
+                technology and new ideas. To me, Software Engineering is more
+                than a field of study. It is a stepping stone toward
+                understanding how technology develops and how an idea can become
+                something real. My curiosity drives me to keep experimenting,
+                learn from my mistakes, and follow the changes happening in the
+                technology world.</span
+              >
+            </h2>
+            <p data-i18n="aboutParagraph2">
+              This website is a record of my learning journey. Here I collect
+              the projects I have built, and it will keep growing over time.
+            </p>
+            <a
+              class="button button--primary button--small"
+              href="about.html"
+              data-i18n="readStories"
+              >Read my stories <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <div class="container">
+          <div class="section-heading projects__heading reveal">
+            <p class="eyebrow" data-i18n="projectsLabel">
+              02 — This is all of my works
+            </p>
+            <h2 data-i18n="projectsTitle">Projects</h2>
+          </div>
+          <div class="projects__layout">
+            <div class="project-folder-wrap reveal">
+              <button
+                class="project-folder"
+                id="project-folder"
+                type="button"
+                aria-expanded="false"
+                aria-label="Open project folder"
+              >
+                <span class="project-folder__back"></span>
+                <span class="project-folder__front"
+                  ><span class="project-folder__icon" aria-hidden="true"></span
+                  ><img class="project-folder__preview" alt=""
+                /></span>
+              </button>
+              <p class="project-folder__hint" data-i18n="folderHint">
+                Click to see all projects
+              </p>
+            </div>
+            <article
+              class="mac-window project-window reveal"
+              aria-live="polite"
+            >
+              <div class="mac-window__bar project-window__bar">
+                <i></i><i></i><i></i><span id="project-window-title"></span>
+              </div>
+              <div class="project-window__content" id="project-content">
+                <p class="project-window__intro" data-i18n="projectIntro">
+                  This is where I document all of my projects—from the most
+                  recent ones to the ones I worked on before that.
+                </p>
+              </div>
+              <div class="project-controls" hidden>
+                <button
+                  type="button"
+                  data-project-step="-1"
+                  aria-label="Previous project"
+                >
+                  ←
+                </button>
+                <span id="project-count"></span>
+                <button
+                  type="button"
+                  data-project-step="1"
+                  aria-label="Next project"
+                >
+                  →
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="skillsLabel">03 — That helps me</p>
+            <h2 data-i18n="skillsTitle">Skills that connect.</h2>
+            <p
+              class="section-heading__description"
+              data-i18n="skillsDescription"
+            >
+              Good digital work lives where technology, craft, and collaboration
+              meet.
+            </p>
+          </div>
+          <div
+            class="skills__tabs"
+            role="tablist"
+            aria-label="Skill categories"
+          >
+            <button
+              role="tab"
+              id="tab-coding"
+              aria-controls="skill-panel"
+              aria-selected="true"
+              data-skill-tab="coding"
+              data-i18n="coding"
+            >
+              Coding
+            </button>
+            <button
+              role="tab"
+              id="tab-tools"
+              aria-controls="skill-panel"
+              aria-selected="false"
+              tabindex="-1"
+              data-skill-tab="tools"
+              data-i18n="tools"
+            >
+              Tools
+            </button>
+            <button
+              role="tab"
+              id="tab-soft"
+              aria-controls="skill-panel"
+              aria-selected="false"
+              tabindex="-1"
+              data-skill-tab="soft"
+              data-i18n="softSkills"
+            >
+              Soft Skills
+            </button>
+          </div>
+          <div
+            class="skills__body"
+            id="skill-panel"
+            role="tabpanel"
+            aria-labelledby="tab-coding"
+            tabindex="0"
+          >
+            <div class="skills__symbol" id="skills-symbol" aria-hidden="true">
+              &lt;/&gt;
+            </div>
+            <div class="skills__grid" id="skills-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <img
+          class="contact__stars"
+          src="assets/svg/star.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="contact__arrow"
+          src="assets/svg/tandapanah.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="container contact__inner">
+          <p class="eyebrow contact__eyebrow reveal" data-i18n="contactLabel">
+            04 — LET'S MAKE SOMETHING GOOD
+          </p>
+          <h2 class="contact__title reveal">
+            <span data-i18n="contactTitle1">Have an idea?</span
+            ><em data-i18n="contactTitle2">Let's talk it through.</em>
+          </h2>
+          <p class="contact__description reveal" data-i18n="contactDescription">
+            I am always happy to meet thoughtful people, hear new perspectives,
+            and explore meaningful work together.
+          </p>
+          <div class="contact__grid">
+            <a
+              class="contact-card reveal"
+              data-contact="email"
+              aria-label="Email contact not configured"
+              ><span
+                class="contact-card__icon contact-card__icon--email"
+                aria-hidden="true"
+              ></span
+              ><span>Email</span></a
+            >
+            <a
+              class="contact-card reveal"
+              data-contact="linkedin"
+              aria-label="LinkedIn contact not configured"
+              ><span
+                class="contact-card__icon contact-card__icon--linkedin"
+                aria-hidden="true"
+                >in</span
+              ><span>Linkedin</span></a
+            >
+            <a
+              class="contact-card reveal"
+              data-contact="instagram"
+              aria-label="Instagram contact not configured"
+              ><span
+                class="contact-card__icon contact-card__icon--instagram"
+                aria-hidden="true"
+              ></span
+              ><span>Instagram</span></a
+            >
+            <a
+              class="contact-card reveal"
+              data-contact="whatsapp"
+              aria-label="WhatsApp contact not configured"
+              ><span
+                class="contact-card__icon contact-card__icon--whatsapp"
+                aria-hidden="true"
+                >WA</span
+              ><span>Whatsapp</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__top">
+        <a
+          class="brand brand--footer"
+          href="#home"
+          aria-label="Maliq's Journey home"
+          ><img src="assets/svg/logo-m.svg" alt="Maliq's Journey"
+        /></a>
+        <nav class="footer__links" aria-label="Footer navigation">
+          <a href="#home" data-i18n="navHome">Home</a
+          ><a href="#about" data-i18n="navAbout">About Me</a
+          ><a href="#projects" data-i18n="navProjects">Projects</a
+          ><a href="#skills" data-i18n="navSkills">Skills</a
+          ><a href="#contact" data-i18n="navContact">Contact Me</a>
+        </nav>
+      </div>
+      <div class="container footer__bottom">
+        <span></span>
+        <p>© 2026 Maliq's Journey</p>
+      </div>
+    </footer>
+  </body>
+</html>
